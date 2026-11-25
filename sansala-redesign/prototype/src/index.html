@@ -1,0 +1,288 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Sansala · Prototipo de rediseño</title>
+<meta name="description" content="Prototipo de diseño no oficial: una propuesta de web inmersiva para Sansala – Natural & Tasty Food.">
+<meta name="theme-color" content="#1C592A">
+<link rel="icon" data-img-href="cropped-sansala_logo_favicon-1-192x192">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;700;800&family=Poppins:wght@600;800&display=swap" rel="stylesheet">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FoodEstablishment","name":"Sansala – Natural & Tasty Food","url":"https://sansala.es/","telephone":"+34916290622","email":"info@sansala.es","address":{"@type":"PostalAddress","streetAddress":"C. de las Navas, 11 (Pol. Ind. Río de Janeiro)","postalCode":"28110","addressLocality":"Algete","addressRegion":"Madrid","addressCountry":"ES"},"parentOrganization":{"@type":"Organization","name":"Grupo Ñaming"}}</script>
+<!--STYLE-->
+</head>
+<body>
+<a class="skip" href="#contenido">Saltar al contenido</a>
+
+<div id="loader" aria-hidden="true">
+  <div class="loader-inner">
+    <span class="logo logo--xl"></span>
+    <div class="loader-bar"><i></i></div>
+    <span class="loader-pct">0%</span>
+  </div>
+</div>
+
+<canvas id="world" aria-hidden="true"></canvas>
+<div class="cursor" aria-hidden="true"></div>
+
+<header class="nav">
+  <a href="#inicio" class="nav-logo" aria-label="Sansala, inicio"><span class="logo"></span></a>
+  <nav class="nav-links" aria-label="Principal">
+    <a href="#productos">Productos</a>
+    <a href="#nosotros">Nosotros</a>
+    <a href="#canales">Canales</a>
+    <a href="#certificados">Calidad</a>
+    <a href="#contacto">Contacto</a>
+  </nav>
+  <a class="btn btn--sm nav-cta" href="#contacto" data-tab="alta">Quiero ser cliente</a>
+  <button class="nav-burger" aria-expanded="false" aria-controls="mnav"><span></span><span></span><span class="sr">Menú</span></button>
+</header>
+<nav id="mnav" class="mnav" aria-label="Menú móvil" hidden>
+  <a href="#productos">Productos</a><a href="#nosotros">Nosotros</a><a href="#canales">Canales</a><a href="#certificados">Calidad</a><a href="#contacto">Contacto</a>
+</nav>
+
+<ol class="meter" aria-hidden="true">
+  <li data-for="inicio"><span>Inicio</span></li>
+  <li data-for="frescura"><span>Frescura</span></li>
+  <li data-for="nosotros"><span>Método</span></li>
+  <li data-for="familias"><span>Familias</span></li>
+  <li data-for="canales"><span>Canales</span></li>
+  <li data-for="certificados"><span>Calidad</span></li>
+  <li data-for="hablamos"><span>Hablamos</span></li>
+</ol>
+
+<div class="proto-badge" role="note">Prototipo de diseño · no oficial</div>
+
+<main id="contenido">
+
+  <!-- 1 · HERO -->
+  <section class="scene" id="inicio" data-scene="hero" style="--len:230vh">
+    <div class="stage stage--hero">
+      <div class="copy" data-hold-start>
+        <p class="eyebrow" data-r>Natural &amp; Tasty Food · Madrid</p>
+        <h1 class="display" data-split>Fresco.<br>Variado.<br>Sabroso.</h1>
+        <p class="lead" data-r>Sándwiches, ensaladas y platos listos para comer, elaborados de forma artesanal desde hace más de 35 años.</p>
+      </div>
+      <div class="scroll-hint" data-hold-start data-r><span></span>Desliza para entrar</div>
+    </div>
+    <figure class="scene-fig"><img data-img="sansala_comida-fresca_variada_sabrosa-scaled" alt="Seis bowls de ensalada Sansala vistos desde arriba"></figure>
+  </section>
+
+  <!-- 2 · FRESCURA -->
+  <section class="scene" id="frescura" data-scene="campo" style="--len:320vh">
+    <div class="stage stage--left">
+      <div class="copy">
+        <p class="eyebrow" data-r>01 · Frescura</p>
+        <h2 class="display" data-split>Frescos<br>como<br>lechugas</h2>
+        <div class="stat" data-r><span class="stat-num">&lt;<b data-count="24">24</b>h</span><span class="stat-label">del campo<br>a nuestro obrador</span></div>
+        <p class="lead" data-r>Las lavamos y cortamos nosotros mismos para asegurar un producto ultrafresco. Porque en Sansala, la frescura es nuestra receta secreta.</p>
+      </div>
+    </div>
+    <figure class="scene-fig"><img data-img="noticias_def_1-scaled" alt="Persona disfrutando de un yogur y una ensalada"></figure>
+  </section>
+
+  <!-- 3 · MÉTODO -->
+  <section class="scene" id="nosotros" data-scene="obrador" style="--len:320vh">
+    <div class="stage stage--right">
+      <div class="copy">
+        <p class="eyebrow" data-r>02 · Nuestro método</p>
+        <h2 class="display" data-split>Capa<br>a capa</h2>
+        <p class="lead" data-r>Formamos parte del <strong>Grupo Ñaming</strong>. Preparamos cada receta con cariño, inspirados en tus gustos y en las últimas tendencias.</p>
+        <ul class="facts" data-r>
+          <li><b data-count="35">35</b><span>años de experiencia</span></li>
+          <li><b data-count="7">7</b><span>días de vida útil</span></li>
+          <li><b data-count="45">45</b><span>referencias</span></li>
+        </ul>
+      </div>
+    </div>
+    <figure class="scene-fig"><img data-img="sansala_conocenos" alt="Manos sosteniendo un bowl de poke Sansala"></figure>
+  </section>
+
+  <!-- 4 · FAMILIAS (anillo 3D) -->
+  <section class="scene" id="familias" data-scene="ring" style="--len:460vh">
+    <div class="stage stage--ring">
+      <div class="copy copy--ring">
+        <p class="eyebrow" data-r>03 · Nuestras familias</p>
+        <p class="ring-name" aria-live="polite" data-r><span id="ringName">Sándwiches</span></p>
+        <p class="ring-line" data-r id="ringLine">Pan tierno, rellenos generosos.</p>
+        <a class="btn" href="#productos" id="ringBtn" data-r>Ver la familia</a>
+      </div>
+      <ol class="ring-dots" data-r aria-hidden="true"></ol>
+    </div>
+    <figure class="scene-fig"><img data-img="SW-CHICKEN-ROYAL_2" alt="Sándwich Chicken Royal"></figure>
+  </section>
+
+  <!-- 5 · CATÁLOGO -->
+  <section class="catalog" id="productos" aria-labelledby="catTitle">
+    <div class="catalog-head">
+      <div>
+        <p class="eyebrow">Catálogo 2026</p>
+        <h2 id="catTitle" class="display display--md">Nuestros productos</h2>
+      </div>
+      <a class="btn btn--ghost" href="https://sansala.es/wp-content/uploads/2026/07/CATALOGO-SANSALA-22072026.pdf" target="_blank" rel="noopener">Descargar catálogo (PDF)</a>
+    </div>
+    <div class="chips" role="toolbar" aria-label="Filtrar por familia"></div>
+    <div class="track-wrap"><ul class="track" id="track"></ul></div>
+  </section>
+
+  <!-- 6 · CANALES -->
+  <section class="scene" id="canales" data-scene="canales" style="--len:320vh">
+    <div class="stage stage--left">
+      <div class="copy">
+        <p class="eyebrow" data-r>04 · Dónde encontrarnos</p>
+        <h2 class="display" data-split>Allí<br>donde<br>estés</h2>
+        <ul class="channels" data-r>
+          <li><b>Retail</b><span>Supermercados y tiendas de conveniencia</span></li>
+          <li><b>Travel</b><span>Aeropuertos, áreas de servicio y estaciones</span></li>
+          <li><b>Gasolineras</b><span>Opciones frescas para el camino</span></li>
+          <li><b>Restauración</b><span>Aérea, naval y ferroviaria</span></li>
+          <li><b>Colectividades</b><span>Hospitales, empresas y colegios</span></li>
+          <li><b>Vending</b><span>Listo en máquinas expendedoras</span></li>
+        </ul>
+      </div>
+    </div>
+    <figure class="scene-fig"><img data-img="PLANTILLA-FOTOS-WEB-SANSALA-3" alt="Plato de noodles con pollo teriyaki"></figure>
+  </section>
+
+  <!-- 7 · CERTIFICADOS -->
+  <section class="scene" id="certificados" data-scene="certs" style="--len:280vh">
+    <div class="stage stage--top">
+      <div class="copy copy--center">
+        <p class="eyebrow" data-r>05 · Calidad certificada</p>
+        <h2 class="display display--md" data-split>Los estándares<br>más exigentes</h2>
+        <p class="lead" data-r>IFS Food versión 8 durante <b>7 años consecutivos</b>, Halal, ASC y MSC: seguridad alimentaria, respeto por el medio ambiente y por la diversidad cultural.</p>
+      </div>
+    </div>
+    <figure class="scene-fig scene-fig--certs">
+      <img data-img="certificacion_ifs_conocenos_sansala" alt="Sello IFS Food">
+      <img data-img="certificacion_sansala_conocenosgarantia_halal_junta_islamica" alt="Sello Halal">
+      <img data-img="asc_certificacion_sansala_conocenos" alt="Sello ASC">
+      <img data-img="certificacion_msc" alt="Sello MSC">
+    </figure>
+  </section>
+
+  <!-- 8 · ATERRIZAJE / CTA -->
+  <section class="scene" id="hablamos" data-scene="final" style="--len:240vh">
+    <div class="stage stage--final">
+      <div class="copy copy--final" data-hold-end>
+        <p class="eyebrow" data-r>06 · Trabajemos juntos</p>
+        <h2 class="display" data-split>¿Lo<br>hablamos?</h2>
+        <p class="lead" data-r>Llevamos producto fresco a puntos de venta de toda España. Cuéntanos qué necesitas.</p>
+        <div class="cta-row" data-r>
+          <a class="btn btn--light" href="#contacto" data-tab="alta">Quiero ser cliente</a>
+          <a class="btn btn--outline-light" href="https://sansala.es/wp-content/uploads/2026/07/CATALOGO-SANSALA-22072026.pdf" target="_blank" rel="noopener">Catálogo PDF</a>
+        </div>
+      </div>
+    </div>
+    <figure class="scene-fig"><img data-img="sansala_contacto_comida_fresca-scaled" alt="Manos sosteniendo un sándwich Sansala"></figure>
+  </section>
+
+  <!-- 9 · CONTACTO -->
+  <section class="contact" id="contacto" aria-labelledby="contactTitle">
+    <div class="contact-grid">
+      <div class="contact-info">
+        <p class="eyebrow">Contacto</p>
+        <h2 id="contactTitle" class="display display--md">Estamos<br>en Madrid</h2>
+        <address>
+          <p>Pol. Ind. Río de Janeiro<br>C. de las Navas, 11<br>28110 Algete (Madrid)</p>
+          <p><a href="tel:+34916290622">+34 91 629 06 22</a><br><a href="mailto:info@sansala.es">info@sansala.es</a></p>
+        </address>
+        <div class="newsletter">
+          <h3>Newsletter</h3>
+          <form class="demo-form form-inline" novalidate>
+            <label class="sr" for="nl">Correo electrónico</label>
+            <input id="nl" type="email" required placeholder="tu@email.com" autocomplete="email">
+            <button class="btn btn--sm" type="submit">Suscribirme</button>
+            <label class="check"><input type="checkbox" required> Acepto la <a href="https://sansala.es/politica-de-privacidad/" target="_blank" rel="noopener">política de privacidad</a></label>
+            <p class="form-msg" role="status"></p>
+          </form>
+        </div>
+      </div>
+      <div class="contact-forms">
+        <div class="tabs" role="tablist" aria-label="Tipo de solicitud">
+          <button role="tab" id="tab-contacto" aria-controls="f-contacto" aria-selected="true">Contacto</button>
+          <button role="tab" id="tab-alta" aria-controls="f-alta" aria-selected="false">Quiero ser cliente</button>
+          <button role="tab" id="tab-empleo" aria-controls="f-empleo" aria-selected="false">Trabaja con nosotros</button>
+        </div>
+        <form id="f-contacto" class="demo-form" role="tabpanel" aria-labelledby="tab-contacto" novalidate>
+          <div class="field"><label for="c-nombre">Nombre y apellidos</label><input id="c-nombre" required autocomplete="name"></div>
+          <div class="field-row">
+            <div class="field"><label for="c-email">Correo electrónico</label><input id="c-email" type="email" required autocomplete="email"></div>
+            <div class="field"><label for="c-tel">Teléfono</label><input id="c-tel" type="tel" autocomplete="tel"></div>
+          </div>
+          <div class="field-row">
+            <div class="field"><label for="c-prov">Provincia</label><input id="c-prov"></div>
+            <div class="field"><label for="c-asunto">Asunto</label><input id="c-asunto" required></div>
+          </div>
+          <div class="field"><label for="c-msg">Mensaje</label><textarea id="c-msg" rows="4" required></textarea></div>
+          <label class="check"><input type="checkbox" required> He leído y acepto la <a href="https://sansala.es/politica-de-privacidad/" target="_blank" rel="noopener">política de privacidad</a></label>
+          <button class="btn" type="submit">Enviar mensaje</button>
+          <p class="form-msg" role="status"></p>
+        </form>
+        <form id="f-alta" class="demo-form" role="tabpanel" aria-labelledby="tab-alta" hidden novalidate>
+          <div class="field-row">
+            <div class="field"><label for="a-nombre">Nombre</label><input id="a-nombre" required autocomplete="name"></div>
+            <div class="field"><label for="a-empresa">Empresa</label><input id="a-empresa" required autocomplete="organization"></div>
+          </div>
+          <div class="field-row">
+            <div class="field"><label for="a-email">Correo electrónico</label><input id="a-email" type="email" required autocomplete="email"></div>
+            <div class="field"><label for="a-tel">Teléfono</label><input id="a-tel" type="tel" required autocomplete="tel"></div>
+          </div>
+          <div class="field-row">
+            <div class="field"><label for="a-cif">CIF</label><input id="a-cif" required></div>
+            <div class="field"><label for="a-dir">Dirección</label><input id="a-dir" autocomplete="street-address"></div>
+          </div>
+          <div class="field"><label for="a-msg">¿Qué te interesa?</label><textarea id="a-msg" rows="3"></textarea></div>
+          <label class="check"><input type="checkbox" required> He leído y acepto la <a href="https://sansala.es/politica-de-privacidad/" target="_blank" rel="noopener">política de privacidad</a></label>
+          <button class="btn" type="submit">Solicitar alta</button>
+          <p class="form-msg" role="status"></p>
+        </form>
+        <form id="f-empleo" class="demo-form" role="tabpanel" aria-labelledby="tab-empleo" hidden novalidate>
+          <p class="form-intro">Buscamos personas apasionadas y con talento. ¡Crece con nosotros!</p>
+          <div class="field-row">
+            <div class="field"><label for="e-nombre">Nombre y apellidos</label><input id="e-nombre" required autocomplete="name"></div>
+            <div class="field"><label for="e-email">Correo electrónico</label><input id="e-email" type="email" required autocomplete="email"></div>
+          </div>
+          <div class="field"><label for="e-cv">Currículum (PDF)</label><input id="e-cv" type="file" accept=".pdf"></div>
+          <label class="check"><input type="checkbox" required> He leído y acepto la <a href="https://sansala.es/politica-de-privacidad/" target="_blank" rel="noopener">política de privacidad</a></label>
+          <button class="btn" type="submit">Enviar candidatura</button>
+          <p class="form-msg" role="status"></p>
+        </form>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="footer-top">
+    <span class="logo logo--light"></span>
+    <div class="footer-cols">
+      <div><h3>Explora</h3><a href="#productos">Productos</a><a href="#nosotros">Nosotros</a><a href="#canales">Canales</a><a href="#contacto">Contacto</a></div>
+      <div><h3>Contacto</h3><a href="tel:+34916290622">+34 91 629 06 22</a><a href="mailto:info@sansala.es">info@sansala.es</a><a href="https://www.linkedin.com/company/sansala-natural-and-tasty-food/" target="_blank" rel="noopener">LinkedIn</a></div>
+      <div><h3>Legal</h3><a href="https://sansala.es/aviso-legal/" target="_blank" rel="noopener">Aviso legal</a><a href="https://sansala.es/politica-de-privacidad/" target="_blank" rel="noopener">Privacidad</a><a href="https://sansala.es/politica-de-cookies/" target="_blank" rel="noopener">Cookies</a><a href="https://centinela.lefebvre.es/public/concept/1279707?access=Gs9bkiAClGn%2bEywA%2bd1xd4TO%2beD8F6EfB%2bzkf4Sqkvw%3d" target="_blank" rel="noopener">Canal ético</a></div>
+    </div>
+  </div>
+  <div class="footer-kit"><img data-img="Logo-digitalizadores-1-2" alt="Programa Kit Digital, financiado por la Unión Europea – NextGenerationEU, Plan de Recuperación, Transformación y Resiliencia"></div>
+  <p class="footer-legal">© 2026 Sansala – Natural &amp; Tasty Food · Resto Vite S.L.U. · <em>Prototipo de diseño no oficial.</em></p>
+</footer>
+
+<dialog id="sheet" aria-labelledby="sheetTitle">
+  <button class="sheet-close" aria-label="Cerrar">×</button>
+  <div class="sheet-img"><img alt=""></div>
+  <div class="sheet-body">
+    <p class="eyebrow" id="sheetCat"></p>
+    <h3 id="sheetTitle"></h3>
+    <p id="sheetDesc"></p>
+    <p class="sheet-tags"></p>
+    <p class="sheet-note">Alérgenos e información nutricional: consultar catálogo.</p>
+    <a class="btn" href="#contacto" data-tab="alta" id="sheetCta">Solicitar información</a>
+  </div>
+</dialog>
+
+<!--IMAGES-->
+<!--SCRIPT-->
+</body>
+</html>

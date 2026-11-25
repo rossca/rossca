@@ -1,0 +1,17 @@
+{
+  "name": "sansala-demo",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Prototipo de diseño (no oficial) de un rediseño inmersivo para Sansala",
+  "type": "module",
+  "scripts": {
+    "build": "node build.mjs",
+    "serve": "npx --yes serve dist"
+  },
+  "dependencies": {
+    "esbuild": "^0.24.2",
+    "gsap": "^3.12.5",
+    "lenis": "^1.1.18",
+    "three": "^0.170.0"
+  }
+}
