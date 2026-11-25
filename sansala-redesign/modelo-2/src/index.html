@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Sansala · Modelo 2 (prototipo)</title>
+<meta name="description" content="Prototipo de diseño no oficial · Modelo 2 «Editorial en movimiento» para Sansala – Natural & Tasty Food.">
+<meta name="theme-color" content="#1C592A">
+<link rel="icon" data-img-href="cropped-sansala_logo_favicon-1-192x192">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=Poppins:wght@700;800&display=swap" rel="stylesheet">
+<!--STYLE-->
+</head>
+<body>
+<a class="skip" href="#contenido">Saltar al contenido</a>
+
+<!-- 0 · INTRO «CORTINA» -->
+<div id="intro" aria-hidden="true">
+  <div class="curtain curtain--top"></div>
+  <div class="curtain curtain--bottom"></div>
+  <span class="logo logo--intro"></span>
+  <span class="intro-count">000</span>
+  <span class="intro-tag">Natural &amp; Tasty Food</span>
+</div>
+
+<div class="progress" aria-hidden="true"><i></i></div>
+<div class="cursor" aria-hidden="true"><span></span></div>
+<div class="hover-img" aria-hidden="true"><img alt=""></div>
+<div class="proto-badge" role="note">Prototipo de diseño · no oficial · Modelo 2</div>
+
+<header class="nav">
+  <a href="#inicio" class="nav-logo" aria-label="Sansala, inicio"><span class="logo"></span></a>
+  <nav class="nav-links" aria-label="Principal">
+    <a href="#campo">Frescura</a><a href="#familias">Familias</a><a href="#carta">La carta</a><a href="#canales">Canales</a><a href="#calidad">Calidad</a>
+  </nav>
+  <a class="pill" href="#hablamos">¿Hablamos?</a>
+</header>
+
+<main id="contenido">
+
+  <!-- 1 · HERO «EL PLATO» -->
+  <section id="inicio" class="hero">
+    <div class="hero-pin">
+      <div class="mq mq--a" aria-hidden="true"><div class="mq-track"><span>Natural &amp; Tasty Food —&nbsp;</span><span>Natural &amp; Tasty Food —&nbsp;</span></div></div>
+      <div class="mq mq--b" aria-hidden="true"><div class="mq-track"><span>Fresco · Variado · Sabroso ·&nbsp;</span><span>Fresco · Variado · Sabroso ·&nbsp;</span></div></div>
+      <div class="plate-wrap">
+        <div class="plate">
+          <canvas id="plate" aria-hidden="true"></canvas>
+          <img class="plate-fallback" data-img="SW-CHICKEN-ROYAL_2" alt="">
+          <div class="plate-fill"></div>
+        </div>
+        <p class="plate-cap" aria-live="polite"><b id="capName">Chicken Royal</b><span id="capCat">Sándwiches</span></p>
+      </div>
+      <div class="hero-copy">
+        <p class="kicker">Madrid · desde hace más de 35 años</p>
+        <h1 class="hero-title"><span class="ln"><span>Natural</span></span><span class="ln"><span>&amp; tasty,</span></span><span class="ln"><span>cada día.</span></span></h1>
+      </div>
+      <p class="hero-side">Sándwiches, ensaladas, wraps y platos listos para comer, elaborados de forma artesanal en nuestro obrador.</p>
+      <span class="hero-scroll">Scroll</span>
+    </div>
+  </section>
+
+  <!-- 2 · DEL CAMPO A TU MANO (horizontal) -->
+  <section id="campo" class="campo" aria-label="Del campo a tu mano">
+    <div class="h-track">
+      <svg class="h-line" aria-hidden="true" preserveAspectRatio="none"><path></path></svg>
+      <div class="h-panel h-intro">
+        <p class="kicker">Nuestro método</p>
+        <h2 class="big">Del campo<br>a tu mano</h2>
+        <p class="lead">Cuatro pasos para que cada bocado llegue en su mejor versión.</p>
+      </div>
+      <article class="h-panel">
+        <span class="h-num">01</span>
+        <div class="h-img"><img data-img="sansala_noticias3-scaled" alt="Cesta con verduras frescas y pan"></div>
+        <div class="h-text"><h3>Del campo</h3><p>En <b>menos de 24 horas</b> las verduras viajan del campo a nuestro obrador.</p></div>
+      </article>
+      <article class="h-panel">
+        <span class="h-num">02</span>
+        <div class="h-img"><img data-img="sansala_conocenos" alt="Manos sosteniendo un bowl de poke"></div>
+        <div class="h-text"><h3>Lavado y corte</h3><p>Las lavamos y cortamos nosotros mismos para asegurar un producto ultrafresco.</p></div>
+      </article>
+      <article class="h-panel">
+        <span class="h-num">03</span>
+        <div class="h-img"><img data-img="noticia_sansala_sandwiches" alt="Sándwich y ensalada servidos en plato"></div>
+        <div class="h-text"><h3>Elaboración artesanal</h3><p>Recetas hechas con cariño, inspiradas en tus gustos y en las últimas tendencias.</p></div>
+      </article>
+      <article class="h-panel">
+        <span class="h-num">04</span>
+        <div class="h-img"><img data-img="sansala_comida-fresca_variada_sabrosa-scaled" alt="Seis bowls de ensalada vistos desde arriba"></div>
+        <div class="h-text"><h3>Siete días de frescura</h3><p>Listo para disfrutar desde que lo preparamos hasta <b>7 días</b> después.</p></div>
+      </article>
+    </div>
+  </section>
+
+  <!-- 3 · FAMILIAS APILADAS -->
+  <section id="familias" class="familias" aria-labelledby="famTitle">
+    <header class="sec-head">
+      <p class="kicker">Siete familias</p>
+      <h2 id="famTitle" class="big">Elige tu<br>momento</h2>
+    </header>
+    <div class="stack"></div>
+  </section>
+
+  <!-- 4 · LA CARTA -->
+  <section id="carta" class="carta" aria-labelledby="cartaTitle">
+    <header class="sec-head sec-head--row">
+      <div><p class="kicker">Catálogo 2026 · 45 referencias</p><h2 id="cartaTitle" class="big">La carta</h2></div>
+      <a class="pill pill--ghost" href="https://sansala.es/wp-content/uploads/2026/07/CATALOGO-SANSALA-22072026.pdf" target="_blank" rel="noopener">Descargar PDF ↓</a>
+    </header>
+    <div class="chips" role="toolbar" aria-label="Filtrar por familia"></div>
+    <div class="menu" id="menu"></div>
+  </section>
+
+  <!-- 5 · CANALES -->
+  <section id="canales" class="canales" aria-labelledby="canTitle">
+    <div class="stats">
+      <div><b data-count="35">0</b><span>años de experiencia</span></div>
+      <div><b data-count="45">0</b><span>referencias</span></div>
+      <div><b data-count="7">0</b><span>días de vida útil</span></div>
+      <div><b>&lt;<i data-count="24">0</i>h</b><span>del campo al obrador</span></div>
+    </div>
+    <div class="band" aria-hidden="true"><div class="band-track"><span>Retail ✺ Travel ✺ Gasolineras ✺ Restauración ✺ Colectividades ✺ Vending ✺&nbsp;</span><span>Retail ✺ Travel ✺ Gasolineras ✺ Restauración ✺ Colectividades ✺ Vending ✺&nbsp;</span></div></div>
+    <header class="sec-head"><p class="kicker">Dónde encontrarnos</p><h2 id="canTitle" class="big">Allí donde<br>estés</h2></header>
+    <ul class="ch-grid">
+      <li><img data-img="mision_sansala_2-1" alt=""><b>Retail</b><span>Supermercados y tiendas de conveniencia.</span></li>
+      <li><img data-img="travel_channel" alt=""><b>Travel</b><span>Aeropuertos, áreas de servicio y estaciones.</span></li>
+      <li><img data-img="gasolineras" alt=""><b>Gasolineras</b><span>Opciones frescas para el camino.</span></li>
+      <li><img data-img="restauracion_aerea_y_ferroviaria" alt=""><b>Restauración</b><span>Aérea, naval y ferroviaria.</span></li>
+      <li><img data-img="colectividades" alt=""><b>Colectividades</b><span>Hospitales, empresas y colegios.</span></li>
+      <li><img data-img="vending_sansala" alt=""><b>Vending</b><span>Listo en máquinas expendedoras.</span></li>
+    </ul>
+  </section>
+
+  <!-- 6 · CALIDAD -->
+  <section id="calidad" class="calidad" aria-labelledby="calTitle">
+    <header class="sec-head sec-head--center">
+      <p class="kicker">Calidad certificada</p>
+      <h2 id="calTitle" class="big">Sin<br>atajos</h2>
+      <p class="lead">IFS Food versión 8 durante <b>7 años consecutivos</b>, Halal, ASC y MSC. Seguridad alimentaria, respeto por el medio ambiente y por la diversidad cultural.</p>
+    </header>
+    <ul class="certs">
+      <li><img data-img="certificacion_ifs_conocenos_sansala" alt="IFS Food versión 8"><span>IFS Food v8</span></li>
+      <li><img data-img="certificacion_sansala_conocenosgarantia_halal_junta_islamica" alt="Garantía Halal"><span>Halal</span></li>
+      <li><img data-img="asc_certificacion_sansala_conocenos" alt="ASC, acuicultura responsable"><span>ASC</span></li>
+      <li><img data-img="certificacion_msc" alt="MSC, pesca sostenible"><span>MSC</span></li>
+    </ul>
+  </section>
+
+  <!-- 7 · ¿HABLAMOS? -->
+  <section id="hablamos" class="hablamos" aria-labelledby="habTitle">
+    <h2 id="habTitle" class="mega" aria-label="¿Hablamos?">¿Hablamos?</h2>
+    <div class="hab-row">
+      <p class="lead">Llevamos producto fresco a puntos de venta de toda España. Cuéntanos qué necesitas y te respondemos en 24 h.</p>
+      <a class="magnet" href="#form"><span>Escríbenos</span></a>
+    </div>
+    <div class="hab-grid" id="form">
+      <address>
+        <p class="kicker">Contacto</p>
+        <p>Pol. Ind. Río de Janeiro<br>C. de las Navas, 11<br>28110 Algete (Madrid)</p>
+        <p><a href="tel:+34916290622">+34 91 629 06 22</a><br><a href="mailto:info@sansala.es">info@sansala.es</a></p>
+        <p><a href="https://www.linkedin.com/company/sansala-natural-and-tasty-food/" target="_blank" rel="noopener">LinkedIn ↗</a></p>
+      </address>
+      <div>
+        <div class="tabs" role="tablist" aria-label="Tipo de solicitud">
+          <button role="tab" id="t-contacto" aria-controls="f-contacto" aria-selected="true">Contacto</button>
+          <button role="tab" id="t-alta" aria-controls="f-alta" aria-selected="false">Quiero ser cliente</button>
+        </div>
+        <form id="f-contacto" class="demo-form" role="tabpanel" aria-labelledby="t-contacto" novalidate>
+          <div class="f2"><label>Nombre y apellidos<input required autocomplete="name"></label><label>Correo electrónico<input type="email" required autocomplete="email"></label></div>
+          <div class="f2"><label>Teléfono<input type="tel" autocomplete="tel"></label><label>Asunto<input required></label></div>
+          <label>Mensaje<textarea rows="3" required></textarea></label>
+          <label class="check"><input type="checkbox" required> Acepto la <a href="https://sansala.es/politica-de-privacidad/" target="_blank" rel="noopener">política de privacidad</a></label>
+          <button class="pill pill--light" type="submit">Enviar mensaje</button>
+          <p class="form-msg" role="status"></p>
+        </form>
+        <form id="f-alta" class="demo-form" role="tabpanel" aria-labelledby="t-alta" hidden novalidate>
+          <div class="f2"><label>Nombre<input required autocomplete="name"></label><label>Empresa<input required autocomplete="organization"></label></div>
+          <div class="f2"><label>Correo electrónico<input type="email" required autocomplete="email"></label><label>Teléfono<input type="tel" required autocomplete="tel"></label></div>
+          <div class="f2"><label>CIF<input required></label><label>Dirección<input autocomplete="street-address"></label></div>
+          <label>¿Qué te interesa?<textarea rows="2" id="altaMsg"></textarea></label>
+          <label class="check"><input type="checkbox" required> Acepto la <a href="https://sansala.es/politica-de-privacidad/" target="_blank" rel="noopener">política de privacidad</a></label>
+          <button class="pill pill--light" type="submit">Solicitar alta</button>
+          <p class="form-msg" role="status"></p>
+        </form>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <span class="logo logo--foot"></span>
+  <nav aria-label="Legal"><a href="https://sansala.es/aviso-legal/" target="_blank" rel="noopener">Aviso legal</a><a href="https://sansala.es/politica-de-privacidad/" target="_blank" rel="noopener">Privacidad</a><a href="https://sansala.es/politica-de-cookies/" target="_blank" rel="noopener">Cookies</a><a href="https://centinela.lefebvre.es/public/concept/1279707?access=Gs9bkiAClGn%2bEywA%2bd1xd4TO%2beD8F6EfB%2bzkf4Sqkvw%3d" target="_blank" rel="noopener">Canal ético</a></nav>
+  <div class="footer-kit"><img data-img="Logo-digitalizadores-1-2" alt="Programa Kit Digital, financiado por la Unión Europea – NextGenerationEU"></div>
+  <p>© 2026 Sansala – Natural &amp; Tasty Food · Resto Vite S.L.U. · <em>Prototipo de diseño no oficial.</em></p>
+</footer>
+
+<dialog id="sheet" aria-labelledby="shTitle">
+  <button class="sh-close" aria-label="Cerrar">×</button>
+  <div class="sh-img"><img alt=""></div>
+  <div class="sh-body"><p class="kicker" id="shCat"></p><h3 id="shTitle"></h3><p id="shDesc"></p><p class="sh-tags"></p>
+    <a class="pill" href="#form" data-tab="alta" id="shCta">Solicitar información</a></div>
+</dialog>
+
+<!--IMAGES-->
+<!--SCRIPT-->
+</body>
+</html>
