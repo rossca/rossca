@@ -1,0 +1,16 @@
+{
+  "name": "sansala-modelo-4",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Prototipo de diseño (no oficial) · Sansala Modelo 4 «Definitivo»",
+  "type": "module",
+  "scripts": {
+    "build": "node build.mjs"
+  },
+  "dependencies": {
+    "esbuild": "^0.24.2",
+    "gsap": "^3.12.5",
+    "lenis": "^1.1.18",
+    "three": "^0.170.0"
+  }
+}
