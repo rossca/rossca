@@ -8,6 +8,7 @@
   {% render 'seo-schema' %}
 {% enddoc %}
 {%- assign shop_url = request.origin | append: routes.root_url | remove_last: '/' -%}
+{%- capture search_target -%}{{ shop_url }}{{ routes.search_url }}?q={search_term_string}{%- endcapture -%}
 {%- assign logo_img = shop.brand.logo | default: images['velaroma-lampara-negro-v2.jpg'] -%}
 <script type="application/ld+json">
 {
@@ -30,7 +31,7 @@
       "publisher": { "@id": {{ shop_url | append: '/#organization' | json }} },
       "potentialAction": {
         "@type": "SearchAction",
-        "target": {{ shop_url | append: routes.search_url | append: '?q={search_term_string}' | json }},
+        "target": {{ search_target | json }},
         "query-input": "required name=search_term_string"
       }
     }

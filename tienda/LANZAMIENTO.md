@@ -26,9 +26,10 @@ Marca: **[TÚ]** = lo haces tú en el admin de Shopify · **[CLAUDE]** = lo hago
 
 ## FASE 4: Envíos (10 min)
 
-11. **[CLAUDE o TÚ] Ajustes → Envío y entrega → Zona "España":** tarifa "Envío gratis 24-72 h" a 0 €.
+11. ✅ **[CLAUDE] Hecho:** tarifa "Envío gratis 24-72 h" a 0 € creada en la zona "España".
+    - **[TÚ] Borra la tarifa antigua "Estándar"** (6,99 €, gratis a partir de cierto importe) en Ajustes → Envío y entrega → Perfil general → España. Usa un formato de condiciones que la API no permite editar, así que no la he tocado. Mientras exista, el cliente verá las dos opciones (elegirá la gratuita).
 12. **[TÚ] Balears, Canarias, Ceuta y Melilla:** crear una zona aparte con su tarifa, o excluirlas al principio (en Canarias no se aplica IVA y hay aduana).
-13. **[CLAUDE] Peso de cada producto:** lámpara ≈ 1,2 kg, pack ≈ 1,6 kg y wax melts ≈ 0,25 kg, para que los transportistas calculen bien.
+13. ✅ **[CLAUDE] Hecho: peso de cada producto:** lámpara 1,2 kg, pack 1,6 kg, wax melts 0,25 kg (pack de 3) y 0,5 kg (pack de 6).
 
 ## FASE 5: Proveedor y stock
 
@@ -41,8 +42,12 @@ Marca: **[TÚ]** = lo haces tú en el admin de Shopify · **[CLAUDE]** = lo hago
 
 ## FASE 6: Marketing listo para lanzar
 
-17. **[CLAUDE] Código de bienvenida `BIENVENIDA10`** (10 % en el primer pedido) para quien se suscriba al boletín.
-18. **[CLAUDE] Colecciones:** "Lámparas", "Wax melts", "Ideas regalo", "Más vendidos".
+17. ✅ **[CLAUDE] Hecho: código `BIENVENIDA10`:** 10 % en todos los productos, activo desde el 27/11/2026, sin fecha de fin, válido para cualquier cliente y **un solo uso por cliente**. Se puede combinar con descuentos de envío.
+18. ✅ **[CLAUDE] Hecho: colecciones automáticas** (se rellenan solas), publicadas en la tienda online y con texto y SEO de `seo/METADATOS.md`:
+    - `/collections/lamparas-calentadoras-de-velas`: tipo de producto "Lámpara calentadora de velas".
+    - `/collections/wax-melts`: tipo "Wax melts".
+    - `/collections/ideas-regalo`: etiqueta `regalo`.
+    - `/collections/mas-vendidos`: etiqueta `bestseller` o `mas-vendido`.
 19. **[TÚ] Instalar Shopify Email** (gratis hasta 10.000 emails/mes) y crear las automatizaciones con los textos de `EMAILS.md`.
 20. **[TÚ] Canales de venta:** conectar **Meta** (Facebook e Instagram), **TikTok** y **Google & YouTube**. Así se instalan los píxeles y el catálogo de productos se sincroniza solo.
 21. **[TÚ] Dominio:** comprar `velaroma.es` o `velaroma.com` (Ajustes → Dominios, unos 15 €/año).
@@ -57,6 +62,14 @@ Marca: **[TÚ]** = lo haces tú en el admin de Shopify · **[CLAUDE]** = lo hago
     - El ROAS mínimo para no perder dinero es aprox. 2,3 (ver `INVESTIGACION_PRODUCTOS.md`).
 
 ---
+
+### SEO aplicado en Shopify (27/11/2026)
+- **Metadatos** (title y meta description) de `seo/METADATOS.md` en la portada, los 3 productos, las 4 colecciones y la página "Envíos y devoluciones".
+- **Blog "Guía Velaroma"** (`/blogs/guia`) con los 4 artículos de `seo/blog/` publicados, cada uno con su title y meta description.
+- **Tema:** `snippets/seo-schema.liquid` añadido y cargado en `layout/theme.liquid`. Se han quitado los JSON-LD que ya generaba `snippets/meta-tags.liquid` (Product, WebSite, Organization) para no duplicarlos.
+- **H1 real en la portada:** el titular del hero es ahora el H1 e incluye la keyword ("Lámpara calentadora de velas Lumière · El aroma de tu vela. Sin llama."). Se ha quitado el H1 oculto con el nombre de la tienda.
+- **[TÚ] Publicar el tema:** los cambios del tema están guardados pero no se ven hasta publicarlo (Tienda online → Temas, o pídemelo).
+- **[TÚ] Idioma:** el idioma principal de la tienda es **inglés** aunque los textos están en español, así que el `<html lang>` sale como `en`. Cambia el idioma principal a español en Ajustes → Idiomas.
 
 ### Lo que YA está hecho
 Diseño con animaciones, 3 productos con fotos fotorrealistas, precios, descripciones, SEO de producto, menús en español, página de envíos y devoluciones, FAQ, newsletter, hero adaptado a móvil y venta cruzada hacia el Pack Regalo.
