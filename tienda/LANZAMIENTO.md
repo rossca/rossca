@@ -68,7 +68,7 @@ Marca: **[TÚ]** = lo haces tú en el admin de Shopify · **[CLAUDE]** = lo hago
 - **Blog "Guía Velaroma"** (`/blogs/guia`) con los 4 artículos de `seo/blog/` publicados, cada uno con su title y meta description.
 - **Tema:** `snippets/seo-schema.liquid` añadido y cargado en `layout/theme.liquid`. Se han quitado los JSON-LD que ya generaba `snippets/meta-tags.liquid` (Product, WebSite, Organization) para no duplicarlos.
 - **H1 real en la portada:** el titular del hero es ahora el H1 e incluye la keyword ("Lámpara calentadora de velas Lumière · El aroma de tu vela. Sin llama."). Se ha quitado el H1 oculto con el nombre de la tienda.
-- **[TÚ] Publicar el tema:** los cambios del tema están guardados pero no se ven hasta publicarlo (Tienda online → Temas, o pídemelo).
+- ✅ **Tema publicado** el 27/11/2026: los cambios ya son visibles en la tienda.
 - **[TÚ] Idioma:** el idioma principal de la tienda es **inglés** aunque los textos están en español, así que el `<html lang>` sale como `en`. Cambia el idioma principal a español en Ajustes → Idiomas.
 
 ### Lo que YA está hecho
