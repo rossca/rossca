@@ -1,0 +1,114 @@
+{% doc %}
+  Structured data (JSON-LD) for Velaroma: Organization + WebSite on every page,
+  Product (with shipping and return policy) and BreadcrumbList on product pages,
+  BreadcrumbList on collections, FAQPage on the homepage.
+  Render once from layout/theme.liquid <head>.
+
+  @example
+  {% render 'seo-schema' %}
+{% enddoc %}
+{%- assign shop_url = request.origin | append: routes.root_url | remove_last: '/' -%}
+{%- assign logo_img = shop.brand.logo | default: images['velaroma-lampara-negro-v2.jpg'] -%}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": {{ shop_url | append: '/#organization' | json }},
+      "name": {{ shop.name | json }},
+      "url": {{ shop_url | json }}
+      {%- if logo_img -%},"logo": {{ logo_img | image_url: width: 600 | prepend: 'https:' | json }}{%- endif -%}
+      {%- if shop.email != blank -%},"email": {{ shop.email | json }}{%- endif -%}
+    },
+    {
+      "@type": "WebSite",
+      "@id": {{ shop_url | append: '/#website' | json }},
+      "url": {{ shop_url | json }},
+      "name": {{ shop.name | json }},
+      "inLanguage": "es-ES",
+      "publisher": { "@id": {{ shop_url | append: '/#organization' | json }} },
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": {{ shop_url | append: routes.search_url | append: '?q={search_term_string}' | json }},
+        "query-input": "required name=search_term_string"
+      }
+    }
+    {%- if template.name == 'product' -%},
+    {
+      "@type": "Product",
+      "@id": {{ shop_url | append: product.url | append: '#product' | json }},
+      "name": {{ product.title | json }},
+      "description": {{ product.description | strip_html | strip_newlines | truncate: 500 | json }},
+      "url": {{ shop_url | append: product.url | json }},
+      "brand": { "@type": "Brand", "name": {{ product.vendor | default: shop.name | json }} },
+      {%- if product.type != blank -%}"category": {{ product.type | json }},{%- endif -%}
+      "image": [
+        {%- for media in product.media limit: 6 -%}
+          {{ media.preview_image | image_url: width: 1600 | prepend: 'https:' | json }}{% unless forloop.last %},{% endunless %}
+        {%- endfor -%}
+      ],
+      "offers": [
+        {%- for variant in product.variants -%}
+        {
+          "@type": "Offer",
+          "sku": {{ variant.sku | default: variant.id | json }},
+          "name": {{ variant.title | json }},
+          "url": {{ shop_url | append: variant.url | json }},
+          "price": {{ variant.price | divided_by: 100.0 | json }},
+          "priceCurrency": {{ cart.currency.iso_code | json }},
+          "availability": "{% if variant.available %}https://schema.org/InStock{% else %}https://schema.org/OutOfStock{% endif %}",
+          "itemCondition": "https://schema.org/NewCondition",
+          "seller": { "@id": {{ shop_url | append: '/#organization' | json }} },
+          "shippingDetails": {
+            "@type": "OfferShippingDetails",
+            "shippingRate": { "@type": "MonetaryAmount", "value": 0, "currency": {{ cart.currency.iso_code | json }} },
+            "shippingDestination": { "@type": "DefinedRegion", "addressCountry": "ES" },
+            "deliveryTime": {
+              "@type": "ShippingDeliveryTime",
+              "handlingTime": { "@type": "QuantitativeValue", "minValue": 0, "maxValue": 1, "unitCode": "DAY" },
+              "transitTime": { "@type": "QuantitativeValue", "minValue": 1, "maxValue": 3, "unitCode": "DAY" }
+            }
+          },
+          "hasMerchantReturnPolicy": {
+            "@type": "MerchantReturnPolicy",
+            "applicableCountry": "ES",
+            "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+            "merchantReturnDays": 30,
+            "returnMethod": "https://schema.org/ReturnByMail",
+            "returnFees": "https://schema.org/ReturnFeesCustomerResponsibility"
+          }
+        }{% unless forloop.last %},{% endunless %}
+        {%- endfor -%}
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Inicio", "item": {{ shop_url | json }} },
+        { "@type": "ListItem", "position": 2, "name": {{ product.title | json }}, "item": {{ shop_url | append: product.url | json }} }
+      ]
+    }
+    {%- elsif template.name == 'collection' -%},
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Inicio", "item": {{ shop_url | json }} },
+        { "@type": "ListItem", "position": 2, "name": {{ collection.title | json }}, "item": {{ shop_url | append: collection.url | json }} }
+      ]
+    }
+    {%- elsif template.name == 'index' -%},
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {%- for i in (1..5) -%}
+          {%- assign q_key = 'home.faq.q' | append: i -%}
+          {%- assign a_key = 'home.faq.a' | append: i -%}
+          { "@type": "Question", "name": {{ q_key | t | json }}, "acceptedAnswer": { "@type": "Answer", "text": {{ a_key | t | json }} } }{% unless forloop.last %},{% endunless %}
+        {%- endfor -%}
+      ]
+    }
+    {%- endif -%}
+  ]
+}
+</script>
