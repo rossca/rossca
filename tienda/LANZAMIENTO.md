@@ -51,7 +51,7 @@ Marca: **[TÚ]** = lo haces tú en el admin de Shopify · **[CLAUDE]** = lo hago
 19. **[TÚ] Instalar Shopify Email** (gratis hasta 10.000 emails/mes) y crear las automatizaciones con los textos de `EMAILS.md`.
 20. **[TÚ] Canales de venta:** conectar **Meta** (Facebook e Instagram), **TikTok** y **Google & YouTube**. Así se instalan los píxeles y el catálogo de productos se sincroniza solo.
 21. **[TÚ] Dominio:** comprar `velaroma.es` o `velaroma.com` (Ajustes → Dominios, unos 15 €/año).
-22. **[TÚ] Quitar la contraseña:** Tienda online → Preferencias → desactivar la contraseña. **La tienda queda abierta al público.**
+22. ✅ **Hecho (28/11/2026): contraseña desactivada.** La tienda está abierta al público en https://vd4w-qz5zyj-k6.myshopify.com.
 
 ## FASE 7: Primeros anuncios (ver `ANUNCIOS.md`)
 
