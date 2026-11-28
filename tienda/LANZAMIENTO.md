@@ -33,7 +33,9 @@ Marca: **[TÚ]** = lo haces tú en el admin de Shopify · **[CLAUDE]** = lo hago
 
 ## FASE 5: Proveedor y stock
 
-14. **[TÚ] Elegir proveedor:**
+> ⏸️ **VENTAS PAUSADAS (28/11/2026)** hasta conectar el proveedor. Las 6 variantes tienen el control de stock activado, 0 unidades y "no vender sin stock", así que salen como "Agotado". El botón de pago rápido se oculta cuando no hay stock. **Para reactivar:** pídeselo a Claude, o pon en cada variante "Continuar vendiendo sin stock" (o deja que la app del proveedor sincronice el stock).
+
+14. **[TÚ] Elegir proveedor:** recomendado **CJdropshipping** (almacén UE + app de Shopify con envío automático de pedidos). Pasos: crear cuenta → instalar la app desde la App Store de Shopify → buscar "candle warmer lamp" con almacén en Europa → enlazarla a los productos existentes ("Connect"), sin crear productos nuevos → activar el pago automático de pedidos → pedir una muestra. **Después, pasa a Claude el enlace del producto elegido** para ajustar descripciones, pack regalo, wax melts, precios y plazos a lo que el proveedor envía de verdad.
     - **Opción A (rápida):** una app de dropshipping con almacén en la UE, como CJdropshipping (almacén en Alemania o España), BigBuy (español) o Spocket. Plazo de 2 a 5 días.
     - **Opción B (más margen):** pedir 30-50 unidades a fábrica (Alibaba), con marcado CE y RoHS, y almacenarlas en casa o en una logística como Cubyn o Outvio.
     - **Pide siempre una muestra** antes de vender. Comprueba la calidad, el CE en la etiqueta y que la bombilla sea GU10 de 35-50 W.
